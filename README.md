@@ -2,7 +2,7 @@
 
 Set of ```std::vector```-like containers optimized for use with polymorphic classes.
 
-The usual way to hold polymorphic classes in std::vector is to use ```std::vector<Base*>``` or ```std::vector<std::unique_ptr<Base*>>```.
+The usual way to hold polymorphic classes in std::vector is to use ```std::vector<Base*>``` or ```std::vector<std::unique_ptr<Base>>```.
 There are 3 major problems with this approach:
 - Individual allocation and deallocation for each object (and on-heap alloc/dealloc is slow)
 - Additional indirection (before accesing object's memory you need to load its pointer from memory)
